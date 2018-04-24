@@ -1,0 +1,9 @@
+<h1>Citations</h1>
+
+  <% @citations.each do |citation| %>
+    <article class="well">
+      <p><%= citation.body %></p>
+    </article>
+  <% end %>
+
+<%= link_to "Create a citation", new_citation_path, class: "btn btn-default" %>

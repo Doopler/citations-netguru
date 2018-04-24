@@ -1,0 +1,15 @@
+<%= form_for(@citation, html: {multipart: true}) do |f| %>
+    <% @citation.errors.full_messages.each do |error| %>
+      <div class="alert alert-danger" role="alert">
+        <strong><%= error %></strong>
+      </div>
+    <% end %>
+  </ul>
+  <div class="form-group">
+    <%= f.text_area :body, class: "form-control", rows: "5"%>
+  </div>
+
+  <p>
+    <%= f.submit class: "btn btn-default"%>
+  </p>
+<% end %>
