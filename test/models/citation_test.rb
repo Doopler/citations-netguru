@@ -1,7 +1,10 @@
 require 'test_helper'
 
 class CitationTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
+  test "should not save citation without body" do
+    citation = Citation.new
+    assert_not citation.save
+  end
+
 end
